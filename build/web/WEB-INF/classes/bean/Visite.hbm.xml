@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="bean.Visite" table="visiter">
+        <composite-id name="id" class="bean.VisiteId">
+            <key-property name="codemed" type="java.lang.String">
+                <column name="codemed" />
+            </key-property>
+            <key-property name="codepat" type="java.lang.String">
+                <column name="codepat" />
+            </key-property>
+        </composite-id>
+        
+        <many-to-one name="medecin" class="bean.Medecin" insert="false" update="false">
+            <column name="codemed" />
+        </many-to-one>
+
+        <many-to-one name="patient" class="bean.Patient" insert="false" update="false">
+            <column name="codepat" />
+        </many-to-one>
+        
+        <property name="date" type="java.util.Date">
+            <column name="date" />
+        </property>
+    </class>
+</hibernate-mapping>

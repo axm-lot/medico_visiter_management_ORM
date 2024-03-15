@@ -100,7 +100,7 @@ public class VisiteManager {
             tx = session.beginTransaction();
 
             // Utilize HQL to search for visits by date, doctor's name, or patient's name
-            Query<Visite> query = session.createQuery("FROM Visite v WHERE v.date = :searchDate OR v.medecin.nom LIKE :searchNomMedecin OR v.patient.nom LIKE :searchNomPatient", Visite.class);
+            //Query<Visite> query = session.createQuery("FROM Visite v WHERE v.date = :searchDate OR v.medecin.nom LIKE :searchNomMedecin OR v.patient.nom LIKE :searchNomPatient", Visite.class);
 
             // Convert the search string to a Date if it's a valid date
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -113,12 +113,12 @@ public class VisiteManager {
 
             // Parameters for the query
             if (searchDate != null) {
-                query.setParameter("searchDate", searchDate);
+            //    query.setParameter("searchDate", searchDate);
             }
-            query.setParameter("searchNomMedecin", "%" + searchValue + "%");
-            query.setParameter("searchNomPatient", "%" + searchValue + "%");
+            //query.setParameter("searchNomMedecin", "%" + searchValue + "%");
+            //query.setParameter("searchNomPatient", "%" + searchValue + "%");
 
-            visite = query.getResultList();
+            //visite = query.getResultList();
 
             // Commit the transaction
             tx.commit();

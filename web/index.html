@@ -1,16 +1,165 @@
-<!DOCTYPE html>
 <!--
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
 Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
 -->
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
-        <a href="http://localhost:8080/gestion_patient_ORM/medecin">test</a>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .form-groupe input[type="text"]{
+            width: 90%;
+            padding: 8px;
+            background-color: #fff;
+            height: 25px;
+            border-radius: 50px;
+            border: 1px solid #ccc;
+            font-size: medium;
+            padding-left: 25px;
+        }
+        
+        .container {
+            max-width: 750px;
+            max-height: 500px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+        }
+
+        .form-container {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .form-container h2 {
+            margin-bottom: 20px;
+        }
+
+        .title-log {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input[type="text"]{
+            width: 90%;
+            padding: 8px;
+            background-color: #ccc;
+            height: 25px;
+            border-radius: 50px;
+            border: 1px solid #ccc;
+            font-size: medium;
+            padding-left: 25px;
+        }
+
+        .form-group input[type="password"]{
+            width: 90%;
+            padding: 8px;
+            background-color: #ccc;
+            height: 25px;
+            border-radius: 50px;
+            border: 1px solid #ccc;
+            font-size: medium;
+            padding-left: 25px;
+        }
+
+        .form-group input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+        }
+
+        .illustration {
+            flex: 1;
+            text-align: center;
+        }
+
+        .illustration img {
+            min-width: 250px;
+            max-width: 400px;
+        }
+        .btn {
+            width: 100%;
+            border-radius: 50px;
+            height: 45px;
+            font-size: large;
+            margin-top: 20px;
+        }
+        #error{
+            display: flex;
+            align-items: center;
+            margin: 0 auto;
+            text-align: center;
+            max-width: 700px;
+            color: tomato;
+            font-size: x-large;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<div style="margin-top: 65px;">
+    <form>
+        <div class="form-groupe" style="background-color: none; color: none;">
+            <p id="error"></p>
+        </div>
+    </form>
+</div>
+<div class="container">
+    <div class="form-container">
+        <h2 class="title-log">Visite dans un centre medicale</h2>
+        <form action="#" method="POST" onsubmit="login(event)">
+            <div class="form-group">
+                <label for="username">Utilisateur:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Mot de passe:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Se connecter" class="btn">
+            </div>
+        </form>
+    </div>
+    <div class="divider">
+        
+    </div>
+    <div class="illustration">
+        <img src="/home/axm/NetBeansProjects/gestion_patient_ORM/web/WEB-INF/pages/medico.png" alt="Login Illustration">
+    </div>
+</div>
+<script>
+    function login(event){
+        event.preventDefault();
+        let uname = document.getElementById("username").value;
+        let passwd = document.getElementById("password").value;
+        if(uname=="admin" && passwd=="admin"){
+            window.location.href ="http://localhost:8080/gestion_patient_ORM/medecin";
+        }else{
+            window.document.getElementById("error").innerHTML = "Nom ou mot de passe incorrect";
+        }
+    };
+</script>
+</body>
 </html>

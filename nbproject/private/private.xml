@@ -3,14 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/axm/NetBeansProjects/gestion_patient_ORM/src/java/servlets/MedecinServlets.java</file>
-            <file>file:/home/axm/NetBeansProjects/gestion_patient_ORM/src/java/manager/VisiteManager.java</file>
-            <file>file:/home/axm/NetBeansProjects/gestion_patient_ORM/web/style.css</file>
             <file>file:/home/axm/NetBeansProjects/gestion_patient_ORM/web/medecin.jsp</file>
-            <file>file:/home/axm/NetBeansProjects/gestion_patient_ORM/web/patient.jsp</file>
-            <file>file:/home/axm/NetBeansProjects/gestion_patient_ORM/src/java/servlets/VisiteServlets.java</file>
-            <file>file:/home/axm/NetBeansProjects/gestion_patient_ORM/src/java/manager/MedecinManager.java</file>
-            <file>file:/home/axm/NetBeansProjects/gestion_patient_ORM/web/visite.jsp</file>
         </group>
     </open-files>
 </project-private>
